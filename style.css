@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 *{
     margin: 0;
-    padding: 0;
+    padding: 1px;
     box-sizing: border-box;
 }
 body{
@@ -53,7 +53,7 @@ body{
     background-color:rgb(225, 232, 229);
 }
 #Design .design-task #Design-Checkbox{
-    cursor: pointer;
+cursor: pointer;
 height: 1rem;
 width: 1rem;
 
@@ -61,4 +61,115 @@ width: 1rem;
 #Design .design-task #Design-Checkbox:checked{
  background-color: #0cdb56;
  color: #0cdb56;
+}
+#Design{
+    margin-top: 1rem;
+}
+#Design .Design-header{
+    font-weight: bold;
+    color:#0cdb56 ;
+}
+#Design .design-task{
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 3px;
+    height: 3rem;
+    padding-left: 2rem;
+    padding-top: 10px;
+    margin:0 1rem ;
+    border-radius: 5px;
+    background-color:rgb(225, 232, 229);
+}
+#Design .design-task #Design-Checkbox{
+cursor: pointer;
+height: 1rem;
+width: 1rem;
+
+}
+#Design .design-task #Design-Checkbox:checked{
+ background-color: #0cdb56;
+ color: #0cdb56;
+}
+#Personal{
+    margin-top: 1rem;
+}
+#Personal .Personal-header{
+    font-weight: bold;
+    color:#0cdb56 ;
+}
+#Personal .Personal-task{
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 3px;
+    height: 3rem;
+    padding-left: 2rem;
+    padding-top: 10px;
+    margin:0 1rem ;
+    border-radius: 5px;
+    background-color:rgb(225, 232, 229);
+}
+#Personal .Personal-task #Personal-Checkbox{
+cursor: pointer;
+height: 1rem;
+width: 1rem;
+
+}
+#Personal .Personal-task #Personal-Checkbox:checked{
+ background-color: #0cdb56;
+ color: #0cdb56;
+}
+#Home{
+    margin-top: 1rem;
+}
+#Home .Home-header{
+    font-weight: bold;
+    color:#0cdb56 ;
+}
+#Home .Home-task{
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 3px;
+    height: 3rem;
+    padding-left: 2rem;
+    padding-top: 10px;
+    margin:0 1rem ;
+    border-radius: 5px;
+    background-color:rgb(225, 232, 229);
+}
+#Home .Home-task #Home-Checkbox{
+cursor: pointer;
+height: 1rem;
+width: 1rem;
+
+}
+#Home .Home-task #Home-Checkbox:checked{
+ background-color: #0cdb56;
+ color: #0cdb56;
+}
+.list-add form{
+    position: absolute;
+    bottom: 0;
+}
+.list-add form .submit{
+    height: 2.5rem;
+    width: 4rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+
+
+}
+.list-add form #Add-list{
+font-size: 1.1rem;
+height: 2.5rem;
+width: 18rem;
+/* margin-left: 1rem; */
+border-radius: 5px;
+padding-left: 1rem;
+}
+.list-add form #Add-list::placeholder{
+    font-size: 1.1rem;
+
 }
