@@ -14,7 +14,11 @@ body{
     width: 100%;
     height: 100vh;
 }
+.card-header span{
+    color: #0cdb56;
+}
 .card .Date{
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -22,12 +26,12 @@ body{
 .card .Date #Time{
     background-color:#b3ffcd ;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     align-items: center;
-    row-gap: 0.3rem;
+    column-gap: 0.3rem;
     border-radius: 10px;
     height: 56px;
-    width: 56px;
+    width: 100%;
     padding: 0.5rem;
 }
 .card .Date #Time h2{
@@ -41,7 +45,7 @@ body{
     font-weight: bold;
     color:#0cdb56 ;
 }
-#Design .design-task{
+#Design #design-task{
     display: flex;
     flex-flow: row wrap;
     column-gap: 3px;
@@ -52,100 +56,17 @@ body{
     border-radius: 5px;
     background-color:rgb(225, 232, 229);
 }
-#Design .design-task #Design-Checkbox{
+#Design #design-task #Design-Checkbox{
 cursor: pointer;
 height: 1rem;
 width: 1rem;
 
 }
-#Design .design-task #Design-Checkbox:checked{
+#Design #design-task #Design-Checkbox:checked{
  background-color: #0cdb56;
  color: #0cdb56;
 }
-#Design{
-    margin-top: 1rem;
-}
-#Design .Design-header{
-    font-weight: bold;
-    color:#0cdb56 ;
-}
-#Design .design-task{
-    display: flex;
-    flex-flow: row wrap;
-    column-gap: 3px;
-    height: 3rem;
-    padding-left: 2rem;
-    padding-top: 10px;
-    margin:0 1rem ;
-    border-radius: 5px;
-    background-color:rgb(225, 232, 229);
-}
-#Design .design-task #Design-Checkbox{
-cursor: pointer;
-height: 1rem;
-width: 1rem;
 
-}
-#Design .design-task #Design-Checkbox:checked{
- background-color: #0cdb56;
- color: #0cdb56;
-}
-#Personal{
-    margin-top: 1rem;
-}
-#Personal .Personal-header{
-    font-weight: bold;
-    color:#0cdb56 ;
-}
-#Personal .Personal-task{
-    display: flex;
-    flex-flow: row wrap;
-    column-gap: 3px;
-    height: 3rem;
-    padding-left: 2rem;
-    padding-top: 10px;
-    margin:0 1rem ;
-    border-radius: 5px;
-    background-color:rgb(225, 232, 229);
-}
-#Personal .Personal-task #Personal-Checkbox{
-cursor: pointer;
-height: 1rem;
-width: 1rem;
-
-}
-#Personal .Personal-task #Personal-Checkbox:checked{
- background-color: #0cdb56;
- color: #0cdb56;
-}
-#Home{
-    margin-top: 1rem;
-}
-#Home .Home-header{
-    font-weight: bold;
-    color:#0cdb56 ;
-}
-#Home .Home-task{
-    display: flex;
-    flex-flow: row wrap;
-    column-gap: 3px;
-    height: 3rem;
-    padding-left: 2rem;
-    padding-top: 10px;
-    margin:0 1rem ;
-    border-radius: 5px;
-    background-color:rgb(225, 232, 229);
-}
-#Home .Home-task #Home-Checkbox{
-cursor: pointer;
-height: 1rem;
-width: 1rem;
-
-}
-#Home .Home-task #Home-Checkbox:checked{
- background-color: #0cdb56;
- color: #0cdb56;
-}
 .list-add form{
     position: absolute;
     bottom: 0;
@@ -172,4 +93,16 @@ padding-left: 1rem;
 .list-add form #Add-list::placeholder{
     font-size: 1.1rem;
 
+}
+
+.list{
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 3px;
+    height: 3rem;
+    padding-left: 2rem;
+    padding-top: 10px;
+    margin:0 1rem ;
+    border-radius: 5px;
+    background-color:rgb(200, 217, 210);
 }
