@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="./main.js" defer></script>
@@ -10,49 +10,32 @@
 <body>
     <div class="card">
         <div class="card-header">
-            <h1>To-Do list</h1>
+            <h1>To-<span>Do</span> list</h1>
         </div>
         <div class="Date">
             <h2 id="date">Today</h2>
             <div id="Time">
                 <h2 id="day">THU</h2>
-                <h2 id="time">26</h2>
             </div>
         </div>
-        <article id="Design">
-            <div class="Design-header">Design</div>
-            <div class="design-task">
+       
+        <div id="Design">
+            
+           <!--  <div id="design-task">
                 <label for="checkbox">
                     <input type="checkbox" name="Checkbox" id="Design-Checkbox">
                 </label>
                 <p>Create icons for a dashboard</p>
-            </div>
-        <article id="Personal">
-            <div class="Personal-header">Personal</div>
-            <div class="Personal-task">
-                <label for="checkbox">
-                    <input type="checkbox" name="Checkbox" id="Personal-Checkbox">
-                </label>
-                <p>Stretch for 15 minutes</p>
-            </div>
-        <article id="Home">
-            <div class="Home-header">Home</div>
-            <div class="Home-task">
-                <label for="checkbox">
-                    <input type="checkbox" name="Checkbox" id="Home-Checkbox">
-                </label>
-                <p>Water indoor plants </p>
-            </div>
-            
-        </article>
+            </div> -->
+        </div>
+      
+   
         <div class="list-add">
-            <form class="form">
+            <form id="form">
                 <input type="text" name="Add-List" id="Add-list" placeholder="Write a task...">
                 <input type="submit" value="Add" class="submit">
             </form>
         </div>
     </div>
-   
-    
 </body>
 </html>
