@@ -1,60 +1,46 @@
-const design=document.getElementById("Design");
-const taskInput=document.querySelector("#Add-list");
+const taskContainer = document.getElementById("Design");
+const taskInput = document.getElementById("Add-list");
+const form = document.getElementById("form");
+const dayElement = document.getElementById("day");
 
-function getTime(){
-    const day=new Date();
-    const date=day.toDateString()
-
-    document.querySelector("#day").innerText=date;
-
-
+function setCurrentDate() {
+  const today = new Date();
+  dayElement.textContent = today.toDateString();
 }
-getTime();
+setCurrentDate();
 
-function designtask(list){
-    const designCheckbox=document.createElement("input");
-     designCheckbox.setAttribute("type","checkbox");
-    designCheckbox.className="Design-checkbox";
-    const task=document.createElement("p");
-    task.innerText=list;
+function createTask(taskText) {
+  const taskWrapper = document.createElement("div");
+  taskWrapper.classList.add("design-task");
 
-    const taskWrapper=document.createElement("div");
-    taskWrapper.className="design-task";
-    taskWrapper.appendChild(designCheckbox);
-    taskWrapper.appendChild(task);
-    taskWrapper.classList.add("list");
-    taskWrapper.style.display="flex";
-    taskWrapper.style.displayDirection="row";
-    taskWrapper.style.marginBottom="3px";
-    taskWrapper.style.columnGap="3px";
-    designCheckbox.style.height="1rem";
-    designCheckbox.style.width="1rem";
-   design.appendChild(taskWrapper);
-    designCheckbox.addEventListener("change",function(){
-        if(designCheckbox.checked){
-            task.style.textDecoration="line-through";
-            task.style.color="grey";
-        }
-        else{
-            task.style.textDecoration="none";
-            task.style.color="black";
-        }
-    });
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.classList.add("Design-checkbox");
 
+  const task = document.createElement("p");
+  task.textContent = taskText;
+
+  checkbox.addEventListener("change", () => {
+    task.classList.toggle("completed", checkbox.checked);
+  });
+
+  taskWrapper.appendChild(checkbox);
+  taskWrapper.appendChild(task);
+  taskContainer.appendChild(taskWrapper);
 }
 
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-const form=document.querySelector("#form");
-if(form){
-    form.addEventListener("submit",function(event){
-        event.preventDefault();
-        if(taskInput.value.trim()!==""){
-            designtask(taskInput.value); ;
-        taskInput.value="";
+    const taskValue = taskInput.value.trim();
+    if (!taskValue) {
+      alert("Please enter a valid task.");
+      return;
     }
-        else{
-        alert("Please enter a valid task.");
-    }
-  
-    });
+
+    createTask(taskValue);
+    taskInput.value = "";
+  });
 }
+
