@@ -54,7 +54,7 @@ body{
     padding-top: 10px;
     margin:0 1rem ;
     border-radius: 5px;
-    background-color:rgb(225, 232, 230);
+    background-color:rgb(225, 235, 230);
 }
 #Design #design-task #Design-Checkbox{
 cursor: pointer;
@@ -104,6 +104,6 @@ padding-left: 1rem;
     padding-top: 10px;
     margin:0 1rem ;
     border-radius: 5px;
-    background-color:rgb(200, 217, 210);
+    background-color:rgb(200, 220, 210);
 }
 
